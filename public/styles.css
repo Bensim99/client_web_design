@@ -491,6 +491,28 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
 }
 
+/* Small annotation chip for client-specific demo fields */
+.field-tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold-600);
+  background: var(--gold-100);
+  border: 1px solid var(--gold-300);
+  padding: 2px 8px;
+  margin-top: var(--space-2);
+  border-radius: 2px;
+}
+.field-tag-dark {
+  background: rgba(11, 23, 51, 0.15);
+  border-color: rgba(11, 23, 51, 0.3);
+  color: var(--ink-900);
+}
+.about-image-badge .field-tag-dark { margin-top: 6px; }
+
 /* === Hero Card / Lead Form === */
 .hero-card {
   position: relative;
