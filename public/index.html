@@ -6,16 +6,39 @@
   <title>[שדה 1: שם משרד עורכי הדין] | דף נחיתה</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+
+  <!-- ========== TOP UTILITY BAR ========== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-info">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          [שדה A: טלפון בפס העליון]
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          [שדה B: שעות פעילות בפס העליון]
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          [שדה C: כתובת קצרה בפס העליון]
+        </span>
+      </div>
+      <a href="#contact" class="topbar-cta">[שדה D: קישור פעולה בפס העליון – לדוגמה "פגישת ייעוץ חינם ←"]</a>
+    </div>
+  </div>
 
   <!-- ========== NAVBAR ========== -->
   <header class="navbar">
     <div class="container nav-inner">
       <a href="#hero" class="logo">
-        <span class="logo-mark">⚖</span>
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M8 8l-3 7a3 3 0 0 0 6 0L8 8z"/><path d="M16 8l-3 7a3 3 0 0 0 6 0l-3-7z"/><path d="M8 21h8"/></svg>
+        </span>
         <span class="logo-text">[שדה 1: שם המשרד]</span>
       </a>
       <nav class="nav-links">
@@ -25,7 +48,7 @@
         <a href="#testimonials">[שדה 5: המלצות]</a>
         <a href="#contact">[שדה 6: צור קשר]</a>
       </nav>
-      <a href="#contact" class="btn btn-primary nav-cta">[שדה 7: כפתור פעולה עליון – לדוגמה "ייעוץ חינם"]</a>
+      <a href="#contact" class="btn btn-primary nav-cta">[שדה 7: כפתור פעולה עליון]</a>
       <button class="nav-toggle" aria-label="פתח תפריט">☰</button>
     </div>
   </header>
@@ -36,46 +59,47 @@
       <div class="hero-text">
         <p class="eyebrow">[שדה 8: שורה עליונה קצרה – לדוגמה "משרד עורכי דין מוביל בישראל"]</p>
         <h1 class="hero-title">
-          [שדה 9: כותרת ראשית – המסר המרכזי של המשרד]
+          [שדה 9: כותרת ראשית – המסר המרכזי. <em>החלק המודגש</em> יודגש בזהב]
         </h1>
         <p class="hero-subtitle">
           [שדה 10: כותרת משנה – משפט אחד או שניים שמסבירים מה אתם מציעים ולמי]
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">[שדה 11: כפתור ראשי – לדוגמה "קבעו פגישת ייעוץ"]</a>
-          <a href="#services" class="btn btn-ghost">[שדה 12: כפתור משני – לדוגמה "תחומי ההתמחות שלנו"]</a>
+          <a href="#contact" class="btn btn-primary">[שדה 11: כפתור ראשי]</a>
+          <a href="#services" class="btn btn-ghost">[שדה 12: כפתור משני]</a>
         </div>
         <div class="hero-badges">
           <div class="badge">
-            <strong>[שדה 13: מספר 1]</strong>
-            <span>[שדה 14: תיאור מספר 1 – לדוגמה "שנות ניסיון"]</span>
+            <strong>[שדה 13]</strong>
+            <span>[שדה 14: תיאור – "שנות ניסיון"]</span>
           </div>
           <div class="badge">
-            <strong>[שדה 15: מספר 2]</strong>
-            <span>[שדה 16: תיאור מספר 2 – לדוגמה "תיקים שטופלו"]</span>
+            <strong>[שדה 15]</strong>
+            <span>[שדה 16: תיאור – "תיקים שטופלו"]</span>
           </div>
           <div class="badge">
-            <strong>[שדה 17: מספר 3]</strong>
-            <span>[שדה 18: תיאור מספר 3 – לדוגמה "אחוז הצלחה"]</span>
+            <strong>[שדה 17]</strong>
+            <span>[שדה 18: תיאור – "אחוז הצלחה"]</span>
           </div>
         </div>
       </div>
       <div class="hero-card">
         <div class="hero-card-inner">
+          <span class="card-eyebrow">[שדה E: תווית עליונה לטופס]</span>
           <h3>[שדה 19: כותרת לטופס לידים]</h3>
-          <p>[שדה 20: תת-כותרת לטופס – לדוגמה "השאירו פרטים ונחזור אליכם תוך 24 שעות"]</p>
+          <p>[שדה 20: תת-כותרת לטופס]</p>
           <form class="lead-form" onsubmit="return handleLead(event)">
             <input type="text" placeholder="[שדה 21: שם מלא]" required />
             <input type="tel" placeholder="[שדה 22: טלפון]" required />
             <input type="email" placeholder="[שדה 23: אימייל]" />
             <select required>
               <option value="" disabled selected>[שדה 24: בחרו תחום עיסוק]</option>
-              <option>[שדה 25: אפשרות 1 בתפריט]</option>
-              <option>[שדה 26: אפשרות 2 בתפריט]</option>
-              <option>[שדה 27: אפשרות 3 בתפריט]</option>
+              <option>[שדה 25: אפשרות 1]</option>
+              <option>[שדה 26: אפשרות 2]</option>
+              <option>[שדה 27: אפשרות 3]</option>
             </select>
-            <button type="submit" class="btn btn-primary btn-block">[שדה 28: כפתור שליחת טופס]</button>
-            <p class="form-note">[שדה 29: הערת פרטיות – לדוגמה "פרטיכם נשמרים בסודיות מלאה"]</p>
+            <button type="submit" class="btn btn-primary btn-block">[שדה 28: כפתור שליחה]</button>
+            <p class="form-note">[שדה 29: הערת פרטיות]</p>
           </form>
         </div>
       </div>
@@ -85,13 +109,13 @@
   <!-- ========== TRUST STRIP ========== -->
   <section class="trust-strip">
     <div class="container">
-      <p class="trust-title">[שדה 30: כותרת רצועת אמינות – לדוגמה "מופיעים ב-"]</p>
+      <p class="trust-title">[שדה 30: כותרת רצועת אמינות]</p>
       <div class="trust-logos">
-        <span>[שדה 31: שם פרסום/מקור 1]</span>
-        <span>[שדה 32: שם פרסום/מקור 2]</span>
-        <span>[שדה 33: שם פרסום/מקור 3]</span>
-        <span>[שדה 34: שם פרסום/מקור 4]</span>
-        <span>[שדה 35: שם פרסום/מקור 5]</span>
+        <span>[שדה 31: שם פרסום 1]</span>
+        <span>[שדה 32: שם פרסום 2]</span>
+        <span>[שדה 33: שם פרסום 3]</span>
+        <span>[שדה 34: שם פרסום 4]</span>
+        <span>[שדה 35: שם פרסום 5]</span>
       </div>
     </div>
   </section>
@@ -125,46 +149,61 @@
   <section id="services" class="section services">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">[שדה 45: תווית קטנה לסעיף השירותים]</p>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9 9H2l5.5 4.5L5 21l7-5 7 5-2.5-7.5L22 9h-7z"/></svg>
+        </div>
+        <p class="eyebrow">[שדה 45: תווית סעיף השירותים]</p>
         <h2 class="section-title">[שדה 46: כותרת תחומי ההתמחות]</h2>
         <p class="section-sub">[שדה 47: תיאור קצר – משפט אחד שמסביר את היצע השירותים]</p>
       </div>
       <div class="services-grid">
         <article class="service-card">
-          <div class="service-icon">⚖</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M8 8l-3 7a3 3 0 0 0 6 0L8 8z"/><path d="M16 8l-3 7a3 3 0 0 0 6 0l-3-7z"/></svg>
+          </div>
           <h3>[שדה 48: שם תחום התמחות 1]</h3>
           <p>[שדה 49: תיאור תחום ההתמחות 1 – משפט או שניים]</p>
-          <a href="#contact" class="service-link">[שדה 50: קישור – לדוגמה "קראו עוד ←"]</a>
+          <a href="#contact" class="service-link">[שדה 50: קישור – "קראו עוד"] ←</a>
         </article>
         <article class="service-card">
-          <div class="service-icon">📜</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="10" y1="9" x2="12" y2="9"/></svg>
+          </div>
           <h3>[שדה 51: שם תחום התמחות 2]</h3>
           <p>[שדה 52: תיאור תחום ההתמחות 2 – משפט או שניים]</p>
-          <a href="#contact" class="service-link">[שדה 53: קישור]</a>
+          <a href="#contact" class="service-link">[שדה 53: קישור] ←</a>
         </article>
         <article class="service-card">
-          <div class="service-icon">🏛</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg>
+          </div>
           <h3>[שדה 54: שם תחום התמחות 3]</h3>
           <p>[שדה 55: תיאור תחום ההתמחות 3 – משפט או שניים]</p>
-          <a href="#contact" class="service-link">[שדה 56: קישור]</a>
+          <a href="#contact" class="service-link">[שדה 56: קישור] ←</a>
         </article>
         <article class="service-card">
-          <div class="service-icon">💼</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
           <h3>[שדה 57: שם תחום התמחות 4]</h3>
           <p>[שדה 58: תיאור תחום ההתמחות 4 – משפט או שניים]</p>
-          <a href="#contact" class="service-link">[שדה 59: קישור]</a>
+          <a href="#contact" class="service-link">[שדה 59: קישור] ←</a>
         </article>
         <article class="service-card">
-          <div class="service-icon">🏠</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
           <h3>[שדה 60: שם תחום התמחות 5]</h3>
           <p>[שדה 61: תיאור תחום ההתמחות 5 – משפט או שניים]</p>
-          <a href="#contact" class="service-link">[שדה 62: קישור]</a>
+          <a href="#contact" class="service-link">[שדה 62: קישור] ←</a>
         </article>
         <article class="service-card">
-          <div class="service-icon">📑</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <h3>[שדה 63: שם תחום התמחות 6]</h3>
           <p>[שדה 64: תיאור תחום ההתמחות 6 – משפט או שניים]</p>
-          <a href="#contact" class="service-link">[שדה 65: קישור]</a>
+          <a href="#contact" class="service-link">[שדה 65: קישור] ←</a>
         </article>
       </div>
     </div>
@@ -174,28 +213,31 @@
   <section class="section process">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">[שדה 66: תווית קטנה לסעיף תהליך העבודה]</p>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9 9H2l5.5 4.5L5 21l7-5 7 5-2.5-7.5L22 9h-7z"/></svg>
+        </div>
+        <p class="eyebrow">[שדה 66: תווית סעיף תהליך העבודה]</p>
         <h2 class="section-title">[שדה 67: כותרת תהליך העבודה]</h2>
         <p class="section-sub">[שדה 68: תיאור קצר על איך עובדים מולכם]</p>
       </div>
       <div class="process-grid">
         <div class="process-step">
-          <div class="step-num">01</div>
+          <div class="step-num">I</div>
           <h4>[שדה 69: שם שלב 1]</h4>
           <p>[שדה 70: תיאור שלב 1]</p>
         </div>
         <div class="process-step">
-          <div class="step-num">02</div>
+          <div class="step-num">II</div>
           <h4>[שדה 71: שם שלב 2]</h4>
           <p>[שדה 72: תיאור שלב 2]</p>
         </div>
         <div class="process-step">
-          <div class="step-num">03</div>
+          <div class="step-num">III</div>
           <h4>[שדה 73: שם שלב 3]</h4>
           <p>[שדה 74: תיאור שלב 3]</p>
         </div>
         <div class="process-step">
-          <div class="step-num">04</div>
+          <div class="step-num">IV</div>
           <h4>[שדה 75: שם שלב 4]</h4>
           <p>[שדה 76: תיאור שלב 4]</p>
         </div>
@@ -207,7 +249,10 @@
   <section id="team" class="section team">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">[שדה 77: תווית קטנה לסעיף הצוות]</p>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9 9H2l5.5 4.5L5 21l7-5 7 5-2.5-7.5L22 9h-7z"/></svg>
+        </div>
+        <p class="eyebrow">[שדה 77: תווית סעיף הצוות]</p>
         <h2 class="section-title">[שדה 78: כותרת הצוות]</h2>
         <p class="section-sub">[שדה 79: תיאור קצר על הצוות]</p>
       </div>
@@ -238,14 +283,17 @@
   <section id="testimonials" class="section testimonials">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">[שדה 92: תווית קטנה לסעיף המלצות]</p>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9 9H2l5.5 4.5L5 21l7-5 7 5-2.5-7.5L22 9h-7z"/></svg>
+        </div>
+        <p class="eyebrow">[שדה 92: תווית סעיף המלצות]</p>
         <h2 class="section-title">[שדה 93: כותרת המלצות לקוחות]</h2>
         <p class="section-sub">[שדה 94: תיאור קצר על המלצות הלקוחות]</p>
       </div>
       <div class="testimonials-grid">
         <blockquote class="testimonial">
           <div class="stars">★★★★★</div>
-          <p>"[שדה 95: ציטוט המלצה 1 – פסקה קצרה מלקוח]"</p>
+          <p>[שדה 95: ציטוט המלצה 1 – פסקה קצרה מלקוח]</p>
           <footer>
             <strong>[שדה 96: שם הלקוח 1]</strong>
             <span>[שדה 97: תיאור/תחום/חברה]</span>
@@ -253,7 +301,7 @@
         </blockquote>
         <blockquote class="testimonial">
           <div class="stars">★★★★★</div>
-          <p>"[שדה 98: ציטוט המלצה 2]"</p>
+          <p>[שדה 98: ציטוט המלצה 2]</p>
           <footer>
             <strong>[שדה 99: שם הלקוח 2]</strong>
             <span>[שדה 100: תיאור/תחום/חברה]</span>
@@ -261,7 +309,7 @@
         </blockquote>
         <blockquote class="testimonial">
           <div class="stars">★★★★★</div>
-          <p>"[שדה 101: ציטוט המלצה 3]"</p>
+          <p>[שדה 101: ציטוט המלצה 3]</p>
           <footer>
             <strong>[שדה 102: שם הלקוח 3]</strong>
             <span>[שדה 103: תיאור/תחום/חברה]</span>
@@ -275,7 +323,10 @@
   <section class="section faq">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">[שדה 104: תווית קטנה לסעיף שאלות נפוצות]</p>
+        <div class="ornament">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L9 9H2l5.5 4.5L5 21l7-5 7 5-2.5-7.5L22 9h-7z"/></svg>
+        </div>
+        <p class="eyebrow">[שדה 104: תווית סעיף שאלות נפוצות]</p>
         <h2 class="section-title">[שדה 105: כותרת שאלות נפוצות]</h2>
         <p class="section-sub">[שדה 106: תיאור קצר על השאלות]</p>
       </div>
@@ -308,7 +359,8 @@
   <section class="cta-banner">
     <div class="container cta-inner">
       <div>
-        <h2>[שדה 117: כותרת באנר הקריאה לפעולה]</h2>
+        <p class="eyebrow">[שדה F: תווית עליונה לבאנר]</p>
+        <h2>[שדה 117: כותרת באנר הקריאה לפעולה. <em>החלק המודגש</em> יודגש בזהב]</h2>
         <p>[שדה 118: משפט תומך לכותרת הבאנר]</p>
       </div>
       <a href="#contact" class="btn btn-primary btn-lg">[שדה 119: כפתור בבאנר]</a>
@@ -319,22 +371,47 @@
   <section id="contact" class="section contact">
     <div class="container contact-grid">
       <div class="contact-info">
-        <p class="eyebrow">[שדה 120: תווית קטנה לסעיף יצירת קשר]</p>
+        <p class="eyebrow">[שדה 120: תווית סעיף יצירת קשר]</p>
         <h2 class="section-title">[שדה 121: כותרת ראשית – צור קשר]</h2>
         <p>[שדה 122: פסקת פתיחה ליצירת קשר]</p>
 
         <ul class="contact-list">
-          <li><span>📍</span> [שדה 123: כתובת המשרד]</li>
-          <li><span>📞</span> [שדה 124: מספר טלפון]</li>
-          <li><span>✉</span> [שדה 125: כתובת אימייל]</li>
-          <li><span>🕒</span> [שדה 126: שעות פעילות]</li>
-          <li><span>💬</span> [שדה 127: ווצאפ / קישור נוסף]</li>
+          <li>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            [שדה 123: כתובת המשרד]
+          </li>
+          <li>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            [שדה 124: מספר טלפון]
+          </li>
+          <li>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            [שדה 125: כתובת אימייל]
+          </li>
+          <li>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            [שדה 126: שעות פעילות]
+          </li>
+          <li>
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </span>
+            [שדה 127: ווצאפ / קישור נוסף]
+          </li>
         </ul>
 
         <div class="socials">
-          <a href="#">[שדה 128: קישור פייסבוק]</a>
-          <a href="#">[שדה 129: קישור לינקדאין]</a>
-          <a href="#">[שדה 130: קישור אינסטגרם]</a>
+          <a href="#">[שדה 128: פייסבוק]</a>
+          <a href="#">[שדה 129: לינקדאין]</a>
+          <a href="#">[שדה 130: אינסטגרם]</a>
         </div>
       </div>
 
@@ -360,7 +437,7 @@
           <input type="checkbox" required />
           <span>[שדה 142: הסכמה לקבלת דיוור / תנאי שימוש]</span>
         </label>
-        <button type="submit" class="btn btn-primary btn-block">[שדה 143: כפתור שליחה בטופס]</button>
+        <button type="submit" class="btn btn-primary btn-block">[שדה 143: כפתור שליחה]</button>
         <p class="form-note">[שדה 144: הערה תחתונה – זמן מענה / פרטיות]</p>
       </form>
     </div>
@@ -371,13 +448,15 @@
     <div class="container footer-grid">
       <div>
         <div class="logo logo-footer">
-          <span class="logo-mark">⚖</span>
+          <span class="logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M8 8l-3 7a3 3 0 0 0 6 0L8 8z"/><path d="M16 8l-3 7a3 3 0 0 0 6 0l-3-7z"/><path d="M8 21h8"/></svg>
+          </span>
           <span class="logo-text">[שדה 145: שם המשרד בפוטר]</span>
         </div>
         <p class="footer-tag">[שדה 146: סלוגן/משפט תיאור בפוטר]</p>
       </div>
       <div>
-        <h5>[שדה 147: כותרת עמודה 1 בפוטר]</h5>
+        <h5>[שדה 147: כותרת עמודה 1]</h5>
         <ul>
           <li><a href="#about">[שדה 148: קישור 1]</a></li>
           <li><a href="#services">[שדה 149: קישור 2]</a></li>
@@ -386,7 +465,7 @@
         </ul>
       </div>
       <div>
-        <h5>[שדה 152: כותרת עמודה 2 בפוטר – לדוגמה "תחומים"]</h5>
+        <h5>[שדה 152: כותרת עמודה 2 – "תחומים"]</h5>
         <ul>
           <li>[שדה 153: תחום 1]</li>
           <li>[שדה 154: תחום 2]</li>
@@ -395,7 +474,7 @@
         </ul>
       </div>
       <div>
-        <h5>[שדה 157: כותרת עמודה 3 בפוטר – פרטי קשר]</h5>
+        <h5>[שדה 157: כותרת עמודה 3 – פרטי קשר]</h5>
         <ul>
           <li>[שדה 158: כתובת]</li>
           <li>[שדה 159: טלפון]</li>
@@ -416,7 +495,9 @@
   </footer>
 
   <!-- ========== FLOATING WHATSAPP ========== -->
-  <a href="#contact" class="floating-cta" title="[שדה 166: טקסט כפתור צף – לדוגמה 'דברו איתנו בווצאפ']">💬</a>
+  <a href="#contact" class="floating-cta" title="[שדה 166: טקסט כפתור צף]">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </a>
 
   <script src="/script.js"></script>
 </body>
