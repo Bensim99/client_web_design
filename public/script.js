@@ -152,6 +152,37 @@
     });
   });
 
+  /* ===== Consult modal (open/close, escape, focus trap) ===== */
+  const consultBtn = document.getElementById('consultFabBtn');
+  const consultModal = document.getElementById('consultModal');
+  if (consultBtn && consultModal) {
+    let lastFocus = null;
+    const focusableSel = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    const openConsult = () => {
+      lastFocus = document.activeElement;
+      consultModal.classList.add('open');
+      consultModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      const first = consultModal.querySelector(focusableSel);
+      if (first) first.focus();
+    };
+    const closeConsult = () => {
+      consultModal.classList.remove('open');
+      consultModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+    };
+
+    consultBtn.addEventListener('click', openConsult);
+    consultModal.querySelectorAll('[data-consult-close]').forEach(el =>
+      el.addEventListener('click', closeConsult)
+    );
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && consultModal.classList.contains('open')) closeConsult();
+    });
+  }
+
   /* ===== Toast notifications ===== */
   const toastEl = document.getElementById('toast');
   let toastTimer;

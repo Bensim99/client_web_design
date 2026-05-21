@@ -1403,6 +1403,248 @@ img { max-width: 100%; display: block; }
 }
 .floating-cta:hover { transform: scale(1.08) translateY(-2px); }
 
+/* ============================================================
+   FLOATING CONSULT BUTTON (rotating text + avatar) + MODAL
+   ============================================================ */
+.consult-fab {
+  position: fixed;
+  bottom: 28px;
+  inset-inline-end: 28px;
+  z-index: var(--z-sticky);
+}
+.consult-fab-btn {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  transition: transform var(--motion-base) var(--ease-spring);
+}
+.consult-fab-btn:hover { transform: scale(1.05); }
+.consult-fab-btn:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 6px;
+  border-radius: 50%;
+}
+
+.consult-fab-text {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spinSlow 10s linear infinite;
+  pointer-events: none;
+}
+.consult-fab-text text {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  fill: var(--ink-900);
+}
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+
+.consult-fab-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--ink-900);
+  border: 3px solid var(--gold-500);
+  box-shadow: var(--elev-3);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.consult-fab-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.consult-fab-avatar.is-fallback {
+  background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-400) 50%, var(--gold-600) 100%);
+}
+.consult-fab-avatar.is-fallback::before {
+  content: "ע״ד";
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink-900);
+  letter-spacing: -0.02em;
+}
+
+.field-tag-floating {
+  position: absolute;
+  bottom: -10px;
+  inset-inline-start: 50%;
+  transform: translateX(50%);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .consult-fab-btn { width: 160px; height: 160px; }
+  .consult-fab-avatar { width: 84px; height: 84px; }
+  .consult-fab-text text { font-size: 19px; }
+}
+
+/* === Consult Modal === */
+.consult-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: none;
+}
+.consult-modal.open { display: block; }
+
+.consult-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 23, 51, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn var(--motion-base) var(--ease-out);
+}
+
+.consult-dialog {
+  position: absolute;
+  bottom: 200px;
+  inset-inline-end: 32px;
+  max-width: 440px;
+  width: calc(100vw - 64px);
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--elev-4);
+  animation: dialogIn var(--motion-base) var(--ease-spring);
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dialogIn {
+  from { opacity: 0; transform: scale(0.85) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.consult-close {
+  position: absolute;
+  top: -52px;
+  inset-inline-end: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: opacity var(--motion-fast) var(--ease-out),
+              transform var(--motion-fast) var(--ease-out);
+}
+.consult-close svg { width: 32px; height: 32px; }
+.consult-close:hover { opacity: 0.7; transform: rotate(90deg); }
+
+.consult-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.consult-header h3 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0;
+  line-height: 1.1;
+  color: var(--ink-900);
+}
+.consult-badge {
+  padding: 8px 18px;
+  border: 2px solid var(--ink-900);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--ink-900);
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.consult-desc {
+  color: var(--color-on-surface-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.consult-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 28px;
+  border-radius: 999px;
+  background: var(--ink-900);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  border: 2px solid var(--ink-900);
+  min-height: 52px;
+  transition: background-color var(--motion-base) var(--ease-out),
+              color var(--motion-base) var(--ease-out),
+              transform var(--motion-fast) var(--ease-out);
+}
+.consult-cta svg { width: 18px; height: 18px; transition: transform var(--motion-base) var(--ease-out); }
+.consult-cta:hover {
+  background: var(--gold-500);
+  border-color: var(--gold-500);
+  color: var(--ink-900);
+  transform: translateY(-2px);
+}
+.consult-cta:hover svg { transform: translateX(-4px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .consult-fab-text { animation: none; }
+  .consult-backdrop, .consult-dialog { animation: none; }
+  .consult-close:hover { transform: none; }
+}
+
+@media (max-width: 960px) {
+  .consult-fab { bottom: 92px; inset-inline-end: 16px; }
+  .consult-fab-btn { width: 104px; height: 104px; }
+  .consult-fab-avatar { width: 56px; height: 56px; }
+  .consult-fab-text text { font-size: 16px; letter-spacing: 0.12em; }
+}
+@media (max-width: 640px) {
+  .consult-dialog {
+    bottom: auto;
+    top: 50%;
+    inset-inline-end: 16px;
+    inset-inline-start: 16px;
+    width: auto;
+    max-width: none;
+    transform: translateY(-50%);
+    padding: 28px;
+    animation: dialogInMobile var(--motion-base) var(--ease-spring);
+  }
+  @keyframes dialogInMobile {
+    from { opacity: 0; transform: translateY(-30%) scale(0.9); }
+    to { opacity: 1; transform: translateY(-50%) scale(1); }
+  }
+  .consult-close {
+    top: 12px;
+    inset-inline-end: 12px;
+    color: var(--ink-900);
+  }
+  .consult-header h3 { font-size: 26px; }
+}
+
 /* ===== TOAST ===== */
 .toast {
   position: fixed;
